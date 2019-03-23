@@ -7,3 +7,5 @@ jumpHeld = keyboard_check(ord("W"));
 jumpReleased = keyboard_check_released(ord("W"));
 
 dashKey = keyboard_check_pressed(ord("K"));
+
+move = rightKey - leftKey;

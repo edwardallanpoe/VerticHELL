@@ -1,14 +1,17 @@
-scr_get_input();
 scr_collisions();
 
 image_index = 0;
 sprite_index = spr_player;
 
 // switch to move state with input
-if (rightKey || leftKey) {
-	if ((rightKey - leftKey) != 0) {
-		state = scr_move_state;
+if (move != 0) {
+	var len = walk_spd * move
+	if (abs(phy_speed_x) < abs(len)) {
+		phy_speed_x += len / accel
+	} else  {
+		phy_speed_x = len;
 	}
+	state = scr_move_state;
 }
 
 //jump check

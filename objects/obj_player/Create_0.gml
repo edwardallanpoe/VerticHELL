@@ -3,11 +3,13 @@ phy_fixed_rotation = true;
 physics_world_gravity(0, 50);
 
 
-jump_dist = 100;
-long_jump_dist = 200;
+jump_dist = 4;			// How far you jump when not holding 'j'
+long_jump_dist = 5.5;
 
-walk_spd = 200;
-run_spd = 300;
+accel = 10 // How many frames it takes for you to reach full speed
+
+walk_spd = 4;
+run_spd = 5.5;
 jump = -2250;
 len = 0;
 dir = 0;

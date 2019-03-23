@@ -1,51 +1,30 @@
-scr_get_input();
 scr_collisions();
 //scr_debugging();
 
 sprite_index = spr_player_run;
 
-//control animation speed based on player speed
-if (phy_speed_x > 0) {
-	image_speed = phy_speed_x / 4;
-} else if (phy_speed_x < 0) {
-	image_speed = -phy_speed_x / 4;
-}
-	
-var move = rightKey - leftKey;
+// Control animation speed based on player speed
+//   Note that abs() gives us the absolute value. This way,
+//   the image speed is never negative, even if we're running left. s
+image_speed = abs(phy_speed_x) / 4;
 
-dir = point_direction(0, 0, move, 0);
-
-//get length of movement
-if (move == 0) {
-	len = 0;
-} else if (move != 0) {
-	
-	if (!runKey) {
-		len = walk_spd;
-	} else {
-		len = run_spd;
-	}
-}
-
-//move player
+// Get length of movement
+// "len" will be 0 if move is 0, negative if it's negative, etc
 if (!runKey) {
-	
-	if (move > 0) {
-		physics_apply_impulse(x, y, 4, 0);
-		physics_apply_force(x, y, len, 0);
-	} else if (move < 0) {
-		physics_apply_impulse(x, y, -4, 0);
-		physics_apply_force(x, y, -len, 0);
-	}
+	len = walk_spd * move;
 } else {
-		
-	if (move > 0) {
-		physics_apply_impulse(x, y, 5.5, 0);
-		physics_apply_force(x, y, len, 0);
-	} else if (move < 0) {
-		physics_apply_impulse(x, y, -5.5, 0);
-		physics_apply_force(x, y, -len, 0);
-	}
+	len = run_spd * move;
+}
+
+// Move player. 
+//   From a stopped position, it will take 'accel' frames to get up to speed,
+//   then we'll maintain a steady speed.
+//
+//	 This could also be done with impulses, but acceleration is harder to control.
+if (abs(phy_speed_x) < abs(len)) {
+	phy_speed_x += len / accel
+} else  {
+	phy_speed_x = len;
 }
 
 //jump check
@@ -56,7 +35,7 @@ if (jumpPressed) and (onGround) {
 	state = scr_jump_state;
 }
 
-//dash checlk
+//dash check
 if (dashKey) and (dashBuffer) {
 	dashBuffer = false;
 	state = scr_dash_state;
