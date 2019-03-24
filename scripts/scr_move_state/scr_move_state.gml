@@ -8,6 +8,11 @@ sprite_index = spr_player_run;
 //   the image speed is never negative, even if we're running left. s
 image_speed = abs(phy_speed_x) / 4;
 
+var move = rightKey - leftKey;
+
+// used to tell the game which direction we are facing.
+dir = point_direction(0, 0, move, 0);
+
 // Get length of movement
 // "len" will be 0 if move is 0, negative if it's negative, etc
 if (!runKey) {
@@ -29,7 +34,7 @@ if (abs(phy_speed_x) < abs(len)) {
 
 //jump check
 if (jumpPressed) and (onGround) {
-	physics_apply_force(x, y, 0, jump * 5);
+	physics_apply_impulse(x, y, 0, jump);
 	onGround = false;
 	doubleJump = true;
 	state = scr_jump_state;

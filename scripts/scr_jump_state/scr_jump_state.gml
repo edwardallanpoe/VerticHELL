@@ -1,4 +1,5 @@
 //midair
+var move = rightKey - leftKey;
 
 // Gravity for this script is set in the room's config panel
 
@@ -26,15 +27,22 @@ if (dashKey) and (dashBuffer) {
 	alarm[1] = room_speed/2;
 }
 
+
 // Sprite animation
 sprite_index = spr_player_jump;
 image_speed = 0;
 	
-if (phy_speed_y > 0) {
-	image_index = 1;
-	phy_speed_y = lerp(0, phy_speed_y, 1.1);
-} else if (phy_speed_y < 0) { 
+if (phy_speed_y < 0) {
 	image_index = 0;
+	
+	// approach "top speed" (I knpw thats not what apogee is, but you get the point) by
+	// a factor of -0.25 per step.
+	phy_speed_y = approach(phy_speed_y, apogee, -0.25);
+} else if (phy_speed_y > 0) { 
+	image_index = 1;
+	
+	// approach terminal velocity by a factor of 1.1.
+	phy_speed_y = approach(phy_speed_y, terminal_vel, 1.1);
 }
 
 // Checking for collision below player
