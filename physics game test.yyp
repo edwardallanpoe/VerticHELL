@@ -115,6 +115,25 @@
             }
         },
         {
+            "Key": "13e37763-5e45-48dc-94dc-fb560e15de4a",
+            "Value": {
+                "id": "a7c8244f-f099-466a-a0ce-6a55dcf47b05",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_player_slide\/spr_player_slide.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "1caf8c5e-54c5-4f7c-a9a2-2e967ba1b64d",
             "Value": {
                 "id": "b7153044-fb09-422b-96c2-3b52daa9ab00",
@@ -248,6 +267,25 @@
             }
         },
         {
+            "Key": "3847f42c-a43b-44d6-adac-4fd130908895",
+            "Value": {
+                "id": "9bff9034-ff5f-480b-b2b5-d395bf540a8e",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spooky_trees_foreground\/spooky_trees_foreground.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "38f76b00-e365-4b2f-bf91-2bfb8ecc9df4",
             "Value": {
                 "id": "af692c42-7a59-4b96-affe-0a4955bd414b",
@@ -264,6 +302,25 @@
                 ],
                 "resourcePath": "views\/38f76b00-e365-4b2f-bf91-2bfb8ecc9df4.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "3a7a0c9d-702a-443e-bec7-f11d3fe580f4",
+            "Value": {
+                "id": "ae27571f-ae51-49cc-8d55-e72ff4206c73",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spooky_trees\/spooky_trees.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -438,6 +495,25 @@
             }
         },
         {
+            "Key": "56b234c0-2684-4f16-b40b-e15377a51b31",
+            "Value": {
+                "id": "0e528922-30d8-445e-b3fe-53d338b4f732",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_player_stand\/spr_player_stand.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "594bd1ab-285d-494e-8fc5-4a595b9bcee8",
             "Value": {
                 "id": "bf36b1ad-5f3b-497d-9ad3-55e8f64a0e3c",
@@ -571,6 +647,25 @@
             }
         },
         {
+            "Key": "7cd7f770-8e99-4b78-83a0-af9b375047c8",
+            "Value": {
+                "id": "80982147-fec3-4e5f-9001-36a32adeee55",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_player_fall\/spr_player_fall.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "8295112c-ae7f-4bf9-b295-46e6617c258d",
             "Value": {
                 "id": "e30b6d7f-1a8e-4240-a60e-3b9f1cdd00c1",
@@ -606,6 +701,44 @@
                 ],
                 "resourcePath": "scripts\/scr_draw_debug\/scr_draw_debug.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "856a0dad-cec2-4697-ab26-5f87d3a2d908",
+            "Value": {
+                "id": "f7f28ad0-3230-470a-8c8b-25bd2f4d5d6a",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "views\/856a0dad-cec2-4697-ab26-5f87d3a2d908.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "8f973f65-6c6f-4e14-8083-105421029691",
+            "Value": {
+                "id": "98e3d58a-8961-4864-a772-de79dad4e53d",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spooky_trees_background\/spooky_trees_background.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -875,6 +1008,25 @@
             }
         },
         {
+            "Key": "ca2261d5-84d3-43f3-9a79-37931210b886",
+            "Value": {
+                "id": "8b2a62b6-aee2-4e5c-9ed7-bbff50976d9c",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_player_walk\/spr_player_walk.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "cc98d028-7bdd-4680-85f3-c87a7baa481e",
             "Value": {
                 "id": "c2bd710f-1783-4ce0-84ed-005bcbf4f4e6",
@@ -908,7 +1060,7 @@
                 "resourceCreationConfigs": [
                     "default"
                 ],
-                "resourcePath": "sprites\/spr_player\/spr_player.yy",
+                "resourcePath": "sprites\/spr_player_idle\/spr_player_idle.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1027,6 +1179,25 @@
             }
         },
         {
+            "Key": "ec8d0544-d213-4fa4-acf2-b098e5d817cf",
+            "Value": {
+                "id": "011d25e9-f06c-433f-b314-83bcc10bc227",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "scripts\/scr_slide_state\/scr_slide_state.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "f418569b-3bdd-4706-a0e4-364317f54032",
             "Value": {
                 "id": "df4916c1-2710-4ac8-ae3d-9dd0de0d1ed3",
@@ -1121,6 +1292,7 @@
         "70cc313d-c132-43b5-87a7-5452cea06218",
         "025a1c4d-4199-41b8-a9c7-89149b7f300a",
         "1eb7c0ad-35a1-4a5e-b3b0-26298f6b45c8",
+        "ec8d0544-d213-4fa4-acf2-b098e5d817cf",
         "d71313b0-9155-49c5-8bde-e915bc4c3f24",
         "fce33738-766c-44e2-af6a-e16184d7e523",
         "5058a289-81a6-4ee4-8142-1ea4bd25aa1a"

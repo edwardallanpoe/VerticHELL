@@ -1,7 +1,7 @@
 if (state_new) {
 	phy_speed_x = 0;
 	phy_speed_y = 0;
-	sprite_index = spr_player;
+	sprite_index = spr_player_idle;
 }
 
 if ((rightKey) and (!place_meeting(x + 1, y, obj_wall))) || 

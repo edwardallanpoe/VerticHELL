@@ -29,17 +29,24 @@ if (dashKey) and (dashBuffer) {
 
 
 // Sprite animation
-sprite_index = spr_player_jump;
-image_speed = 0;
+
 	
 if (phy_speed_y < 0) {
-	image_index = 0;
+
+	sprite_index = spr_player_jump;
+	image_index = 2;
+	image_speed = 0;
 	
 	// approach "top speed" (I knpw thats not what apogee is, but you get the point) by
 	// a factor of -0.25 per step.
 	phy_speed_y = approach(phy_speed_y, apogee, -0.25);
+	
+	if (phy_speed_y == apogee) {
+		image_index = 3;
+	}
 } else if (phy_speed_y > 0) { 
-	image_index = 1;
+	sprite_index = spr_player_fall;
+	image_speed = 1;
 	
 	// approach terminal velocity by a factor of 1.1.
 	phy_speed_y = approach(phy_speed_y, terminal_vel, 1.1);
@@ -47,10 +54,11 @@ if (phy_speed_y < 0) {
 
 // Checking for collision below player
 if (physics_test_overlap(x, y + 1, 0, obj_wall)) {
-	onGround = true;
 	if (phy_speed_x == 0) {
 		state = scr_stand_state;
-	} else {
+	}
+	
+	if (phy_speed_x != 0) {
 		state = scr_move_state;
 	}
 

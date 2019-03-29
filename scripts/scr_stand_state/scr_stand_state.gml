@@ -1,7 +1,7 @@
 scr_collisions();
 
-image_index = 0;
-sprite_index = spr_player;
+sprite_index = spr_player_idle;
+image_speed = 1;
 
 // switch to move state with input
 //if (move != 0) {

@@ -8,6 +8,8 @@ jumpReleased = keyboard_check_released(ord("W"));
 
 dashKey = keyboard_check_pressed(ord("K"));
 
+slideKey = keyboard_check(ord("L"))
+
 #region PREVIOUS SCRIPT
 // were only checking for the keys themselves that are pressed, held, or released.
 // move is not an input itself; it contains a value from two inputs that we use to

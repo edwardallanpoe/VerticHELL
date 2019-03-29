@@ -1,2 +1,14 @@
-x += (obj_player.x - x) * .1;
-y += (obj_player.y - y) * .1;
+x += (obj_player.x - x) * .7;
+y += (obj_player.y - y) * .7;
+
+if (layer_exists("spooky_trees_bg")) {
+	layer_x("spooky_trees_bg", x * 0.2);
+}
+
+if (layer_exists("spooky_trees_mg")) {
+	layer_x("spooky_trees_mg", x * 0.3);
+}
+
+if (layer_exists("spooky_trees_fg")) {
+	layer_x("spooky_trees_fg", x * 0.4);
+}

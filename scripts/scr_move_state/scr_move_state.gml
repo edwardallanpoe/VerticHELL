@@ -1,12 +1,12 @@
 scr_collisions();
 //scr_debugging();
 
-sprite_index = spr_player_run;
+sprite_index = spr_player_walk;
 
 // Control animation speed based on player speed
 //   Note that abs() gives us the absolute value. This way,
 //   the image speed is never negative, even if we're running left. s
-image_speed = abs(phy_speed_x) / 4;
+image_speed = abs(phy_speed_x) /1.5;
 
 var move = rightKey - leftKey;
 
@@ -36,7 +36,7 @@ if (abs(phy_speed_x) < abs(len)) {
 if (jumpPressed) and (onGround) {
 	physics_apply_impulse(x, y, 0, jump);
 	onGround = false;
-	doubleJump = true;
+
 	state = scr_jump_state;
 }
 
@@ -48,6 +48,11 @@ if (dashKey) and (dashBuffer) {
 	alarm[1] = room_speed/2;
 }
 
+//slide check
+if (slideKey) {
+	phy_speed_x = len*1.5;
+	state = scr_slide_state;
+}
 
 //check for standing on the ground
 if (!physics_test_overlap(x, y + 1, 0, obj_wall)) {
@@ -58,6 +63,11 @@ if (!physics_test_overlap(x, y + 1, 0, obj_wall)) {
 
 ///flip sprite and switch to stand if there is no x speed
 if (phy_speed_x != 0) {
+	if (runKey) {
+		sprite_index = spr_player_run;
+		image_speed = 1;
+	}
+	
 	image_xscale = sign(phy_speed_x);
 } else if (phy_speed_x == 0) {
 	state = scr_stand_state;
