@@ -1,14 +1,18 @@
-leftKey = keyboard_check(ord("A"));
-rightKey = keyboard_check(ord("D"));
+leftKey = global.controls[pID, ctrl.left];
+rightKey = global.controls[pID, ctrl.right];
 
-runKey = keyboard_check(ord("J"));
-jumpPressed = keyboard_check_pressed(ord("W"));
-jumpHeld = keyboard_check(ord("W"));
-jumpReleased = keyboard_check_released(ord("W"));
+walkKey = global.controls[pID, ctrl.walk];
+jumpPressed = global.controls[pID, ctrl.jumpPre];
+jumpHeld = global.controls[pID, ctrl.jumpHel];
+jumpReleased = global.controls[pID, ctrl.jumpRel];
 
-dashKey = keyboard_check_pressed(ord("K"));
+dashKey = global.controls[pID, ctrl.dash];
 
-slideKey = keyboard_check(ord("L"))
+slideKey = global.controls[pID, ctrl.slide];
+
+punchKey = global.controls[pID, ctrl.punch];
+
+swingKey = global.controls[pID, ctrl.swing];
 
 #region PREVIOUS SCRIPT
 // were only checking for the keys themselves that are pressed, held, or released.
@@ -19,3 +23,4 @@ slideKey = keyboard_check(ord("L"))
 
 //move = rightKey - leftKey;
 #endregion
+
