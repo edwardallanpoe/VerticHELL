@@ -6,10 +6,10 @@ var move = rightKey - leftKey;
 // Get length of movement
 // Note that if "move" positive, "len"  will be positive, and similarly with negative.
 // Also, if we're *not* moving, "move" will be 0, making "len" 0 also. 
-if (!runKey) {
-	len = jump_dist * move;
-} else {
+if (!walkKey) {
 	len = long_jump_dist * move;
+} else {
+	len = jump_dist * move;
 }
 
 // Applying movement forces in air
@@ -17,6 +17,19 @@ if (abs(phy_speed_x) < abs(len)) {
 	phy_speed_x += len / accel
 } else  {
 	phy_speed_x = len;
+}
+
+if (swingKey) {
+	set_rope_swing();
+	state = scr_swing_state;
+}
+
+if ((jumpPressed) and (doubleJump) and (phy_speed_y > 0)) {
+	physics_apply_impulse(x, y, 0, jump*1.5);
+	doubleJump = false;
+} else if ((jumpPressed) and (doubleJump) and (phy_speed_y < 0)) {
+	physics_apply_impulse(x, y, 0, jump*0.75);
+	doubleJump = false;
 }
 
 // Dash check

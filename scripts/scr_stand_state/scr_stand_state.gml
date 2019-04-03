@@ -30,13 +30,24 @@ if ((rightKey - leftKey) != 0) {
 	state = scr_move_state;
 }
 
+if (swingKey) {
+	set_rope_swing();
+	state = scr_swing_state;
+}
+
 //jump check
 if (jumpPressed) and (onGround) {
 	physics_apply_impulse(x, y, 0, jump);
 	state = scr_jump_state;
+	doubleJump = true;
+}
+
+if (punchKey) {
+	state = scr_attack_state;
 }
 
 //check for no ground
 if (!physics_test_overlap(x, y + 1, 0, obj_wall)) {
 	state = scr_jump_state;
+	doubleJump = true;
 }

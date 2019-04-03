@@ -20,5 +20,6 @@ if (phy_speed_x != 0) {
 }
 
 if (!physics_test_overlap(x, y + 1, 0, obj_wall)) {
-	state = scr_jump_state;	
+	state = scr_jump_state;
+	doubleJump = true;
 }

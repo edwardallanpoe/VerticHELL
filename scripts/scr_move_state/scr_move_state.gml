@@ -1,12 +1,11 @@
 scr_collisions();
 //scr_debugging();
 
-sprite_index = spr_player_walk;
 
 // Control animation speed based on player speed
 //   Note that abs() gives us the absolute value. This way,
 //   the image speed is never negative, even if we're running left. s
-image_speed = abs(phy_speed_x) /1.5;
+
 
 var move = rightKey - leftKey;
 
@@ -15,10 +14,14 @@ dir = point_direction(0, 0, move, 0);
 
 // Get length of movement
 // "len" will be 0 if move is 0, negative if it's negative, etc
-if (!runKey) {
-	len = walk_spd * move;
-} else {
+if (!walkKey) {
 	len = run_spd * move;
+	sprite_index = spr_player_run;
+	image_speed = abs(phy_speed_x) /2;
+} else {
+	len = walk_spd * move;
+	sprite_index = spr_player_walk;
+	image_speed = 1;
 }
 
 // Move player. 
@@ -32,12 +35,22 @@ if (abs(phy_speed_x) < abs(len)) {
 	phy_speed_x = len;
 }
 
+if (swingKey) {
+	set_rope_swing();
+	state = scr_swing_state;
+}
+
 //jump check
 if (jumpPressed) and (onGround) {
 	physics_apply_impulse(x, y, 0, jump);
 	onGround = false;
+	doubleJump = true;
 
 	state = scr_jump_state;
+}
+
+if (punchKey) {
+	state = scr_attack_state;
 }
 
 //dash check
@@ -63,10 +76,10 @@ if (!physics_test_overlap(x, y + 1, 0, obj_wall)) {
 
 ///flip sprite and switch to stand if there is no x speed
 if (phy_speed_x != 0) {
-	if (runKey) {
-		sprite_index = spr_player_run;
-		image_speed = 1;
-	}
+	//if (walkKey) {
+	//	sprite_index = spr_player_walk;
+	//	image_speed = 1;
+	//}
 	
 	image_xscale = sign(phy_speed_x);
 } else if (phy_speed_x == 0) {

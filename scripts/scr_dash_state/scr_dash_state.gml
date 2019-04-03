@@ -1,4 +1,4 @@
-//scr_get_input();
+scr_get_input();
 scr_collisions();
 len = abs(len)*1.5;
 
