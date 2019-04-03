@@ -1,5 +1,5 @@
 //init
-phy_fixed_rotation = true;
+event_inherited();
 physics_world_gravity(0, 10);
 
 
@@ -20,6 +20,7 @@ len = 0;
 dir = 0;
 
 onGround = false;
+doubleJump = false;
 
 
 terminal_vel = 20;
@@ -27,6 +28,12 @@ apogee = -30;
 
 
 dashBuffer = true;
+
+attacked = false;
+
+
+draw_set_font(font0);
+draw_set_colour(c_white);
 
 state = scr_move_state;
 

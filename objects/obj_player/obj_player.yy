@@ -25,16 +25,6 @@
             "m_owner": "984c7a06-6198-4ac1-8d47-218297ae9060"
         },
         {
-            "id": "f4c5690f-8b00-47d0-84f2-5854832c794e",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "01ddf0ee-1454-4718-b4ac-deb2d1da38aa",
-            "enumb": 0,
-            "eventtype": 4,
-            "m_owner": "984c7a06-6198-4ac1-8d47-218297ae9060"
-        },
-        {
             "id": "89791ec7-8631-4950-919b-8f5eba03dd72",
             "modelName": "GMEvent",
             "mvc": "1.0",
@@ -53,11 +43,41 @@
             "enumb": 1,
             "eventtype": 2,
             "m_owner": "984c7a06-6198-4ac1-8d47-218297ae9060"
+        },
+        {
+            "id": "571de321-ef88-4632-8732-425e6b748531",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 7,
+            "eventtype": 7,
+            "m_owner": "984c7a06-6198-4ac1-8d47-218297ae9060"
+        },
+        {
+            "id": "f27ef475-8c91-434e-a6c9-cdffababf6a4",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 64,
+            "eventtype": 8,
+            "m_owner": "984c7a06-6198-4ac1-8d47-218297ae9060"
+        },
+        {
+            "id": "9eee54a9-87cb-4027-b85a-563217e620ed",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 8,
+            "m_owner": "984c7a06-6198-4ac1-8d47-218297ae9060"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
-    "parentObjectId": "00000000-0000-0000-0000-000000000000",
+    "parentObjectId": "64bd1150-3182-425b-ab90-31f5c9787d71",
     "persistent": false,
     "physicsAngularDamping": 0.5,
     "physicsDensity": 1,
@@ -100,7 +120,22 @@
         }
     ],
     "physicsStartAwake": true,
-    "properties": null,
+    "properties": [
+        {
+            "id": "76ed81ff-437f-4477-8f20-6839871f9b54",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "pID",
+            "varType": 1
+        }
+    ],
     "solid": false,
     "spriteId": "ccbcf5f6-4a34-40fb-944d-e894ce000fe7",
     "visible": true
