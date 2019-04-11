@@ -1,6 +1,6 @@
 //init
 
 damage = 1;
-knockback = 4000;
+knockback = 125;
 creator = noone;
 alarm[0] = 1;

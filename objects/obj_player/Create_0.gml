@@ -22,15 +22,25 @@ dir = 0;
 onGround = false;
 doubleJump = false;
 
+onWall = 0;
+h_wallJump = 100;
+wallJumpSpd_max = -5;
+v_wallJump = -120;
+
 
 terminal_vel = 20;
 apogee = -30;
 
 
 dashBuffer = true;
+wallJumpDelay = 0;
+wallJumpDelayMax = 19;
 
 attacked = false;
+invincible = false;
 
+stunDelay = 0;
+stunDelayMax = 35;
 
 draw_set_font(font0);
 draw_set_colour(c_white);

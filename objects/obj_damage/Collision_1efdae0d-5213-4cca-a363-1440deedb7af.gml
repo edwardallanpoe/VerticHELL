@@ -6,8 +6,12 @@ if (other.id != creator) {
 	var dir = point_direction(creator.x, creator.y, other.x, other.y);
 	var xforce = lengthdir_x(knockback, dir);
 	
-	with (other) {
+	
+	with (obj_seeker) {
+		stunDelay = stunDelayMax;
+		
 		physics_apply_impulse(x, y, xforce, 0);
+		obj_seeker.state = scr_seeker_ai_injured;
 	
 	}
 }

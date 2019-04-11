@@ -31,8 +31,10 @@ if ((rightKey - leftKey) != 0) {
 }
 
 if (swingKey) {
-	set_rope_swing();
-	state = scr_swing_state;
+	if (physics_test_overlap(mouse_x, mouse_y, 0, obj_wall)) {
+		set_rope_swing();
+		state = scr_swing_state;
+	}
 }
 
 //jump check

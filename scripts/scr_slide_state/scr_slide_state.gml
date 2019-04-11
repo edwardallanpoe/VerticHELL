@@ -1,5 +1,7 @@
-scr_get_input();
+//scr_get_input();
 scr_collisions();
+
+invincible = true;
 
 phy_speed_x = approach(phy_speed_x, 0, slide_friction);
 phy_position_x += phy_speed_x;

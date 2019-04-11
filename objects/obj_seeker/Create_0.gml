@@ -1,7 +1,7 @@
 //create
 event_inherited();
 
-physics_world_gravity(0, 10);
+physics_world_gravity(0, 50);
 
 
 //used only when player is controlling the seeker
@@ -32,11 +32,15 @@ chase_spd = 0.8;
 terminal_vel = 20;
 apogee = -30;
 
+stunDelay = 0;
+stunDelayMax = 35;
+
 state = scr_seeker_ai_idle;
 
 draw_set_font(font0);
 draw_set_colour(c_white);
 
 alarm[0] = room_speed*irandom_range(2, 4);
-sight = 200;
+sight = 125;
 targetx = 0;
+

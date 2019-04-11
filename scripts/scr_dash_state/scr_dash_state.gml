@@ -2,6 +2,7 @@ scr_get_input();
 scr_collisions();
 len = abs(len)*1.5;
 
+
 #region PREVIOUS SCRIPT
 
 // there was no value for dir set outside of the player create event

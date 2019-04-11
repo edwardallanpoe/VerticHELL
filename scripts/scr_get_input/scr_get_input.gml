@@ -14,6 +14,8 @@ punchKey = global.controls[pID, ctrl.punch];
 
 swingKey = global.controls[pID, ctrl.swing];
 
+diveKey = global.controls[pID, ctrl.dive];
+
 #region PREVIOUS SCRIPT
 // were only checking for the keys themselves that are pressed, held, or released.
 // move is not an input itself; it contains a value from two inputs that we use to

@@ -40,8 +40,28 @@
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 64,
+            "enumb": 0,
             "eventtype": 8,
+            "m_owner": "a431ab85-dad2-47bd-a70e-cbd84735faa1"
+        },
+        {
+            "id": "4cfb6583-5007-4f02-b605-dfc0e928bb58",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 1,
+            "eventtype": 2,
+            "m_owner": "a431ab85-dad2-47bd-a70e-cbd84735faa1"
+        },
+        {
+            "id": "d66a66ba-6da3-4496-adec-d4c83516283d",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "984c7a06-6198-4ac1-8d47-218297ae9060",
+            "enumb": 0,
+            "eventtype": 4,
             "m_owner": "a431ab85-dad2-47bd-a70e-cbd84735faa1"
         }
     ],
@@ -61,31 +81,31 @@
     "physicsShape": 1,
     "physicsShapePoints": [
         {
-            "id": "c4e5b959-1499-4103-99be-fc955d76aec3",
+            "id": "8744cdec-ab67-409c-b604-a1bf1b91ed26",
             "modelName": "GMPoint",
             "mvc": "1.0",
-            "x": 9,
+            "x": 7,
             "y": 20
         },
         {
-            "id": "b425d87f-d702-4b0c-a111-f16a2c04b7e8",
+            "id": "22884803-07d1-4ee6-93c9-23d0dc98cffb",
             "modelName": "GMPoint",
             "mvc": "1.0",
             "x": 41,
             "y": 20
         },
         {
-            "id": "6388b5e2-32e3-4088-98df-106370a94100",
+            "id": "15774c3a-a75e-427c-91ab-b9f41b512253",
             "modelName": "GMPoint",
             "mvc": "1.0",
             "x": 41,
             "y": 48
         },
         {
-            "id": "6df644bb-69eb-45b3-a591-5dcdac9082bc",
+            "id": "0c191a6b-8d24-4520-b06c-8e01c0a25ead",
             "modelName": "GMPoint",
             "mvc": "1.0",
-            "x": 9,
+            "x": 7,
             "y": 48
         }
     ],

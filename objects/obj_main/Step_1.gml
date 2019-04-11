@@ -10,6 +10,7 @@ global.controls[0, ctrl.dash] = keyboard_check_pressed(ord("G"));
 global.controls[0, ctrl.slide] = keyboard_check(ord("H"));
 global.controls[0, ctrl.walk] = keyboard_check(ord("F"));
 global.controls[0, ctrl.punch] = keyboard_check(ord("E"));
+global.controls[0, ctrl.dive] = keyboard_check_pressed(ord("S"));
 global.controls[0, ctrl.swing] = mouse_check_button_pressed(mb_left);
 
 //player 2

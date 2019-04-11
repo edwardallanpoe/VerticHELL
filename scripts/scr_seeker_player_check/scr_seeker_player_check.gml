@@ -21,8 +21,26 @@ if (instance_exists(obj_player)) {
 	
 	if (dis < sight) {
 		
-		state = scr_seeker_ai_chase;
-		targetx = obj_player.x;
+		if (dis >= 75) {
+			
+			switch (sprite_index) {
+				
+				case spr_en_seeker_idle:
+					sprite_index = spr_en_seeker_alert;
+					break;
+					
+				case spr_seeker_walk:
+					sprite_index = spr_en_seeker_alert;
+					break;
+				
+			}
+			
+		} else if (dis < 75) {
+			state = scr_seeker_ai_chase;
+			targetx = obj_player.x;	
+		}
+		
+
 	} else {
 		if (state == scr_seeker_ai_chase) {
 			state = choose(scr_seeker_ai_wander, scr_seeker_ai_idle);

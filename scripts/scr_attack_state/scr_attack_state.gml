@@ -19,9 +19,9 @@ switch (sprite_index) {
 	
 }
 
-if (image_index >= 3) and (attacked == false) {
+if (image_index >= 2) and (attacked == false) {
 	var damage = instance_create_depth(x, y, 1, obj_damage);
-	damage.image_xscale = image_xscale;
+	//damage.image_xscale = image_xscale;
 	damage.creator = id;
 	attacked = true;
 }

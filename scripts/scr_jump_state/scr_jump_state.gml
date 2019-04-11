@@ -12,17 +12,23 @@ if (!walkKey) {
 	len = jump_dist * move;
 }
 
-// Applying movement forces in air
-if (abs(phy_speed_x) < abs(len)) {
-	phy_speed_x += len / accel
-} else  {
-	phy_speed_x = len;
+if (swingKey) {
+	if (physics_test_overlap(mouse_x, mouse_y, 0, obj_wall)) {
+		set_rope_swing();
+		state = scr_swing_state;
+	}
 }
 
-if (swingKey) {
-	set_rope_swing();
-	state = scr_swing_state;
+wallJumpDelay = max(wallJumpDelay-1, 0)
+if (wallJumpDelay == 0) {
+	// Applying movement forces in air
+	if (abs(phy_speed_x) < abs(len)) {
+		phy_speed_x += len / accel
+	} else  {
+		phy_speed_x = len;
+	}
 }
+
 
 if ((jumpPressed) and (doubleJump) and (phy_speed_y > 0)) {
 	physics_apply_impulse(x, y, 0, jump*1.5);
@@ -40,6 +46,10 @@ if (dashKey) and (dashBuffer) {
 	alarm[1] = room_speed/2;
 }
 
+if (diveKey) {
+	state = scr_dive_state;
+	alarm[0] = room_speed*2;
+}
 
 // Sprite animation
 

@@ -24,20 +24,27 @@ if (!walkKey) {
 	image_speed = 1;
 }
 
-// Move player. 
-//   From a stopped position, it will take 'accel' frames to get up to speed,
-//   then we'll maintain a steady speed.
-//
-//	 This could also be done with impulses, but acceleration is harder to control.
-if (abs(phy_speed_x) < abs(len)) {
-	phy_speed_x += len / accel
-} else  {
-	phy_speed_x = len;
+wallJumpDelay = max(wallJumpDelay-1, 0)
+if (wallJumpDelay == 0) {
+	// Move player. 
+	//   From a stopped position, it will take 'accel' frames to get up to speed,
+	//   then we'll maintain a steady speed.
+	//
+	//	 This could also be done with impulses, but acceleration is harder to control.
+	if (abs(phy_speed_x) < abs(len)) {
+		phy_speed_x += len / accel
+	} else  {
+		phy_speed_x = len;
+	}
 }
 
+
+
 if (swingKey) {
-	set_rope_swing();
-	state = scr_swing_state;
+	if (physics_test_overlap(mouse_x, mouse_y, 0, obj_wall)) {
+		set_rope_swing();
+		state = scr_swing_state;
+	}
 }
 
 //jump check
