@@ -69,9 +69,11 @@ if (dashKey) and (dashBuffer) {
 }
 
 //slide check
-if (slideKey) {
-	phy_speed_x = len*1.5;
+if (slideKey) and (slideBuffer) {
+	slideBuffer = false; 
+	phy_speed_x = len*2.5;
 	state = scr_slide_state;
+	alarm[1] = room_speed*1.1;
 }
 
 //check for standing on the ground

@@ -8,12 +8,12 @@ jump_dist = 2;			// How far you jump when not holding 'j'
 long_jump_dist = 3.5;
 
 accel = 5 // How many frames it takes for you to reach full speed
-slide_friction = 0.05;
+slide_friction = 0.01;
 
 walk_spd = 1.7;
 run_spd = 3;
 
-jump = -150;
+jump = -160;
 
 
 len = 0;
@@ -23,7 +23,7 @@ onGround = false;
 doubleJump = false;
 
 onWall = 0;
-h_wallJump = 100;
+h_wallJump = 150;
 wallJumpSpd_max = -5;
 v_wallJump = -120;
 
@@ -33,6 +33,7 @@ apogee = -30;
 
 
 dashBuffer = true;
+slideBuffer = true;
 wallJumpDelay = 0;
 wallJumpDelayMax = 19;
 
